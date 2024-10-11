@@ -1,0 +1,23 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.localnet]
+drift_vaults = "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[[test.genesis]]
+address = "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH"
+program = "./deps/drift.so"
+
+[[test.genesis]]
+address = "DraWMeQX9LfzQQSYoeBwHAgM5JcqFkgrX7GbTfjzVMVL"
+program = "./deps/drift_competitions.so"
+
+[scripts]
+test = "yarn anchor-tests"
